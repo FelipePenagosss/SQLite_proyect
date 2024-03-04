@@ -1,4 +1,31 @@
 <resources>
     <string name="app_name">SQLite_proyect</string>
+    <string name="hint_titulo">Titulo pelicula </string>
+    <string name="hint_anio">Año de lanzamiento </string>
+    <string name="hint_genero"> Comedia, accion </string>
+    <string name="hint_duracion"> tiempo en texto </string>
+    <string name="hint_calificacion"> 1-10 </string>
+    <string name="hint_presupuesto"> Millones </string>
+    <string name="btn_agregar"> AGREGAR </string>
+    <string name="btn_mostrar"> MOSTRAR </string>
+    <string name="txt_titulo"> Titulo </string>
+    <string name="txt_anio"> Año </string>
+    <string name="txt_genero"> Genero </string>
+    <string name="txt_duracion"> Duracion </string>
+    <string name="txt_calificacion"> Calificacion </string>
+    <string name="txt_presupuesto"> Presupuesto </string>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </resources>

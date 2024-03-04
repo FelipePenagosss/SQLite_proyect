@@ -62,7 +62,7 @@ public class DbHelper extends SQLiteOpenHelper {
 
         if(cursor.moveToFirst()) {
         do {
-            peliculas.add(new PeliculasModelo(cursor.getString(0),cursor.getInt(1),cursor.getString(2),cursor.getString(3),cursor.getInt(4),cursor.getInt(5)));
+            peliculas.add(new PeliculasModelo(cursor.getString(1),cursor.getInt(2),cursor.getString(3),cursor.getString(4),cursor.getInt(5),cursor.getInt(6)));
         }while (cursor.moveToNext());
         }
         return peliculas;

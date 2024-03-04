@@ -41,6 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="@string/hint_titulo"
             android:inputType="text" />
 
         <TextView
@@ -54,6 +55,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="@string/hint_anio"
             android:inputType="number" />
 
         <TextView
@@ -67,6 +69,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="@string/hint_genero"
             android:inputType="text" />
 
         <TextView
@@ -80,6 +83,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="@string/hint_duracion"
             android:inputType="text" />
 
         <TextView
@@ -93,6 +97,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="@string/hint_presupuesto"
             android:inputType="number" />
 
         <TextView
@@ -106,13 +111,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="@string/hint_calificacion"
             android:inputType="number" />
 
         <Button
             android:id="@+id/btnAgregar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="AGREGAR" />
+            android:text="@string/btn_agregar" />
 
         <Button
             android:id="@+id/btnEditar"
@@ -130,6 +136,6 @@
             android:id="@+id/btnMostrar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="MOSTRAR" />
+            android:text="@string/btn_mostrar" />
     </LinearLayout>
 </RelativeLayout>

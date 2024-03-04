@@ -46,11 +46,11 @@ public List<PeliculasModelo> peliculasLista;
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.titulo.setText(peliculasLista.get(position).getTitulo());
-        holder.anio.setText(peliculasLista.get(position).getAnio());
+        holder.anio.setText(String.valueOf(peliculasLista.get(position).getAnio()));
         holder.genero.setText(peliculasLista.get(position).getGenero());
         holder.duracion.setText(peliculasLista.get(position).getDuracion());
-        holder.presupuesto.setText(peliculasLista.get(position).getPresupuesto());
-        holder.calificacion.setText(peliculasLista.get(position).getCalificacion());
+        holder.presupuesto.setText(String.valueOf(peliculasLista.get(position).getPresupuesto()));
+        holder.calificacion.setText(String.valueOf(peliculasLista.get(position).getCalificacion()));
 
 
     }
