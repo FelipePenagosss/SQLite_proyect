@@ -1,10 +1,14 @@
 package com.cmp.sqlite_proyect;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DbHelper extends SQLiteOpenHelper {
 
@@ -51,5 +55,17 @@ public class DbHelper extends SQLiteOpenHelper {
 
     }
 
+    public List<PeliculasModelo> mostrarPeliculas(){
+        SQLiteDatabase bd = getReadableDatabase();
+        Cursor cursor = bd.rawQuery("SELECT * FROM Peliculas",null);
+        List<PeliculasModelo> peliculas = new ArrayList<>();
+
+        if(cursor.moveToFirst()) {
+        do {
+            peliculas.add(new PeliculasModelo(cursor.getString(0),cursor.getInt(1),cursor.getString(2),cursor.getString(3),cursor.getInt(4),cursor.getInt(5)));
+        }while (cursor.moveToNext());
+        }
+        return peliculas;
+    }
 }
 

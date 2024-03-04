@@ -2,6 +2,7 @@
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +12,7 @@ import android.widget.Toast;
  public class MainActivity extends AppCompatActivity {
 
     EditText editTitulo, editAnio,editGenero,editDuracion,editPresupuesto,editCalificacion ;
-    Button btnAgregar;
+    Button btnAgregar,btnMostrar;
 
      @Override
      protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,8 @@ import android.widget.Toast;
 
          // Inicializa el botón btnAgregar
          btnAgregar = (Button) findViewById(R.id.btnAgregar);
+         btnMostrar = (Button) findViewById(R.id.btnMostrar);
+
 
          final DbHelper dbHelper = new DbHelper(getApplicationContext());
 
@@ -43,6 +46,14 @@ import android.widget.Toast;
                  );
 
                  Toast.makeText(getApplicationContext(), "SE AGREGÓ CORRECTAMENTE", Toast.LENGTH_LONG).show();
+             }
+         });
+
+         btnMostrar.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 Intent mostrarPeliculas = new Intent(getApplicationContext(), PeliculasActivity.class);
+                 startActivity(mostrarPeliculas);
              }
          });
      }
