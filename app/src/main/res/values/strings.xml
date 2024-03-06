@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">SQLite_proyect</string>
+    <string name="hint_ID">Id pelicula </string>
     <string name="hint_titulo">Titulo pelicula </string>
     <string name="hint_anio">Año de lanzamiento </string>
     <string name="hint_genero"> Comedia, accion </string>
@@ -8,19 +9,49 @@
     <string name="hint_presupuesto"> Millones </string>
     <string name="btn_agregar"> AGREGAR </string>
     <string name="btn_mostrar"> MOSTRAR </string>
+    <string name="btn_buscar"> Buscar </string>
+    <string name="btn_editar"> EDITAR </string>
+    <string name="btn_eliminar"> ELIMINAR </string>
+    <string name="txt_Id"> Id </string>
     <string name="txt_titulo"> Titulo </string>
     <string name="txt_anio"> Año </string>
     <string name="txt_genero"> Genero </string>
     <string name="txt_duracion"> Duracion </string>
     <string name="txt_calificacion"> Calificacion </string>
     <string name="txt_presupuesto"> Presupuesto </string>
+    <string name="btn_peliculas"> Tabla peliculas </string>
 
 
+    <string name="btn_TipoActor"> Tabla tipos de actores </string>
+    <string name="txt_Id_tipoActor"> Id Actor </string>
+    <string name="txt_nombreActor"> Tipo Actor </string>
+    <string name="hint_IdTA">Id tipo de actor </string>
+    <string name="hint_nombreTA">Nombre tipo de actor </string>
+    <string name="btn_agregarTA"> AGREGAR </string>
+    <string name="btn_mostrarTA"> MOSTRAR </string>
+    <string name="btn_buscarTA"> Buscar </string>
+    <string name="btn_editarTA"> EDITAR </string>
+    <string name="btn_eliminarTA"> ELIMINAR </string>
 
 
-
-
-
+    <string name="btn_Actores"> Tabla actores </string>
+    <string name="txt_IDAC"> Id actor </string>
+    <string name="txt_nombreAC"> Nombre Actor </string>
+    <string name="txt_fechaAC"> Fecha de nacimiento AAAA/MM/DD </string>
+    <string name="txt_nacionalidadAC"> Nacionalidad </string>
+    <string name="txt_sexoAC">Id actor </string>
+    <string name="txt_idtipoAC">Id tipo actor </string>
+    <string name="hint_IDAC"> Id actor </string>
+    <string name="hint_nombreAC"> Nombre Actor </string>
+    <string name="hint_fechaAC"> Fecha de nacimiento AAAA/MM/DD </string>
+    <string name="hint_nacionalidadAC"> Nacionalidad </string>
+    <string name="hint_sexoAC">Sexo </string>
+    <string name="hint_idtipoAC">Id tipo actor </string>
+    <string name="btn_agregarAC"> AGREGAR </string>
+    <string name="btn_mostrarAC"> MOSTRAR </string>
+    <string name="btn_buscarAC"> Buscar </string>
+    <string name="btn_editarAC"> EDITAR </string>
+    <string name="btn_eliminarAC"> ELIMINAR </string>
 
 
 

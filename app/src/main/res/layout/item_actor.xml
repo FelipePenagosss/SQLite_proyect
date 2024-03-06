@@ -5,7 +5,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="5dp"
@@ -25,7 +25,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
-                android:foreground="@drawable/icono1" />
+                android:foreground="@drawable/icono3" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -36,58 +36,54 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/txtTitulo"
+                    android:id="@+id/txtNombreAC"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp"
-                    android:text="@string/txt_titulo"
+                    android:text="@string/txt_nombreAC"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/txtNombreTipo"
+                    android:id="@+id/txtIDAC"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/txt_Id"
+                    android:text="@string/txt_IDAC"
                     android:textSize="12sp" />
 
                 <TextView
-                    android:id="@+id/txtAnio"
+                    android:id="@+id/txtFechaAC"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/txt_anio"
+                    android:text="@string/txt_fechaAC"
                     android:textSize="12sp" />
 
                 <TextView
-                    android:id="@+id/txtGenero"
+                    android:id="@+id/txtNacionalidadAC"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/txt_genero"
+                    android:text="@string/txt_nacionalidadAC"
                     android:textSize="12sp" />
 
                 <TextView
-                    android:id="@+id/txtDuracion"
+                    android:id="@+id/txtSexoAC"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/txt_duracion"
+                    android:text="@string/txt_sexoAC"
                     android:textSize="12sp" />
 
                 <TextView
-                    android:id="@+id/txtPresupuesto"
+                    android:id="@+id/txtTipoAC"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/txt_presupuesto"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:id="@+id/txtCalificacion"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/txt_calificacion"
+                    android:text="@string/txt_idtipoAC"
                     android:textSize="12sp" />
 
 
             </LinearLayout>
+
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
 </LinearLayout>

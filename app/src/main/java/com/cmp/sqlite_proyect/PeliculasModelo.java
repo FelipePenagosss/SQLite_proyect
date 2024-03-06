@@ -3,12 +3,15 @@ package com.cmp.sqlite_proyect;
 public class PeliculasModelo {
 
 private String titulo,genero,duracion;
-private int imgIcono,anio, presupuesto, calificacion;
+
+
+    private int id,anio, presupuesto, calificacion;
 
     public PeliculasModelo() {
     }
 
-    public PeliculasModelo(String titulo, int anio, String genero, String duracion,  int presupuesto, int calificacion) {
+    public PeliculasModelo(int id,String titulo, int anio, String genero, String duracion,  int presupuesto, int calificacion) {
+        this.id = id;
         this.titulo = titulo;
         this.genero = genero;
         this.duracion = duracion;
@@ -41,13 +44,7 @@ private int imgIcono,anio, presupuesto, calificacion;
         this.duracion = duracion;
     }
 
-    public int getImgIcono() {
-        return imgIcono;
-    }
 
-    public void setImgIcono(int imgIcono) {
-        this.imgIcono = imgIcono;
-    }
 
     public int getAnio() {
         return anio;
@@ -72,4 +69,14 @@ private int imgIcono,anio, presupuesto, calificacion;
     public void setCalificacion(int calificacion) {
         this.calificacion = calificacion;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
 }
+

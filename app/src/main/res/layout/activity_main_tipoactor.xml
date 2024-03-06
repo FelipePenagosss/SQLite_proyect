@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cmp.sqlite_proyect.MainActivityTipoActor"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="TIPOS DE ACTORES"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtviewtpc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Id tipo actor " />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+
+                android:id="@+id/editIdTA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/hint_IdTA"
+                android:inputType="text"
+                />
+
+            <Button
+                android:id="@+id/btnBuscarTA"
+                android:layout_width="146dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btn_buscarTA" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtviewtpc1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Id tipo actor " />
+
+        <EditText
+
+            android:id="@+id/editNombreTA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/hint_nombreTA"
+            android:inputType="text"
+            />
+
+        <Button
+            android:id="@+id/btnAgregarTA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_agregarTA" />
+
+        <Button
+            android:id="@+id/btnEditaTA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_editarTA" />
+
+        <Button
+            android:id="@+id/btnEliminarTA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_eliminarTA" />
+
+        <Button
+            android:id="@+id/btnMostrarTA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_mostrarTA" />
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

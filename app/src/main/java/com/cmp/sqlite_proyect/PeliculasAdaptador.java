@@ -13,9 +13,11 @@ import java.util.List;
 public class PeliculasAdaptador extends RecyclerView.Adapter<PeliculasAdaptador.ViewHolder> {
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
-        private TextView titulo, anio, genero,duracion,presupuesto,calificacion;
+        private TextView id,titulo, anio, genero,duracion,presupuesto,calificacion;
         public ViewHolder(View itemView){
             super(itemView);
+
+            id = (TextView) itemView.findViewById(R.id.txtNombreTipo);
             titulo = (TextView) itemView.findViewById(R.id.txtTitulo);
             anio = (TextView) itemView.findViewById(R.id.txtAnio);
             genero = (TextView) itemView.findViewById(R.id.txtGenero);
@@ -45,6 +47,8 @@ public List<PeliculasModelo> peliculasLista;
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+
+        holder.id.setText(String.valueOf(peliculasLista.get(position).getId()));
         holder.titulo.setText(peliculasLista.get(position).getTitulo());
         holder.anio.setText(String.valueOf(peliculasLista.get(position).getAnio()));
         holder.genero.setText(peliculasLista.get(position).getGenero());
