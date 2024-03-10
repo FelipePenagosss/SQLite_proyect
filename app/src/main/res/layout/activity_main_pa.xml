@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cmp.sqlite_proyect.MainActivityPA"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="PARTICIPACIÓN DE ACTORES EN PELICULA"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtviewtpc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Id participacion " />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+
+                android:id="@+id/editIdPA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/hint_IdPA"
+                android:inputType="text"
+                />
+
+            <Button
+                android:id="@+id/btnBuscarPA"
+                android:layout_width="146dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btn_buscarPA" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtviewtpc1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Id pelicula " />
+
+        <EditText
+
+            android:id="@+id/editIdpeliculaPA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/hint_IdPeliculaPA"
+            android:inputType="number"
+            />
+
+        <TextView
+            android:id="@+id/txtviewpc1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Id actor  " />
+
+        <EditText
+
+            android:id="@+id/editIdActorPA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/hint_IdActorPA"
+            android:inputType="number"
+            />
+
+        <Button
+            android:id="@+id/btnAgregarPA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_agregarPA" />
+
+        <Button
+            android:id="@+id/btnEditaPA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_editarPA" />
+
+        <Button
+            android:id="@+id/btnEliminarPA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_eliminarPA" />
+
+        <Button
+            android:id="@+id/btnMostrarPA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_mostrarPA" />
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

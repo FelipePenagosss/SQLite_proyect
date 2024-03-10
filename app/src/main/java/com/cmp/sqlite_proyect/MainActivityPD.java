@@ -64,8 +64,8 @@ public class MainActivityPD extends AppCompatActivity {
                 ParticipacionDirectorModelo participacionDirectorModelo = new ParticipacionDirectorModelo();
                 dbHelper.buscarParticipacionDirector(participacionDirectorModelo,Integer.parseInt(editIdPD.getText().toString()));
 
-                editIdPelicula.setText(participacionDirectorModelo.getId_pelicula());
-                editIdDirector.setText(participacionDirectorModelo.getId_director());
+                editIdPelicula.setText(String.valueOf(participacionDirectorModelo.getId_pelicula()));
+                editIdDirector.setText(String.valueOf(participacionDirectorModelo.getId_director()));
 
 
 

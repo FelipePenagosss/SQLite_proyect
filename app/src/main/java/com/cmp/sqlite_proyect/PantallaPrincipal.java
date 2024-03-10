@@ -10,7 +10,7 @@ import android.widget.Button;
 
 public class PantallaPrincipal extends AppCompatActivity {
 
-    Button btnPeliculas,btnTipoActor,btnActores,btnPremios,btnDirectores,btnPD;
+    Button btnPeliculas,btnTipoActor,btnActores,btnPremios,btnDirectores,btnPD,btnPA;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -26,6 +26,8 @@ public class PantallaPrincipal extends AppCompatActivity {
         btnActores = (Button) findViewById(R.id.btnActor);
         btnDirectores = (Button) findViewById(R.id.btnDirectores);
         btnPD = (Button) findViewById(R.id.btnParticipacionPeliculaDirector);
+        btnPA = (Button) findViewById(R.id.btnParticipacionPeliculaActor);
+
 
 
 
@@ -94,6 +96,17 @@ public class PantallaPrincipal extends AppCompatActivity {
 
                 Intent mostrarFormularioParticipacionDirectores = new Intent(getApplicationContext(), MainActivityPD.class);
                 startActivity(mostrarFormularioParticipacionDirectores);
+            }
+        });
+
+        btnPA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
+                Intent mostrarFormularioParticipacionActores = new Intent(getApplicationContext(), MainActivityPA.class);
+                startActivity(mostrarFormularioParticipacionActores);
             }
         });
 

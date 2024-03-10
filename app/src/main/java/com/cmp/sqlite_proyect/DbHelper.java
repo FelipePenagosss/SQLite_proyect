@@ -499,6 +499,58 @@ public class DbHelper extends SQLiteOpenHelper {
         }
     }
 
+    public void agregarParticipacionActor(int id_participacion, int id_pelicula, int id_actor) {
+        SQLiteDatabase bd = getWritableDatabase();
+        if (bd != null) {
+            bd.execSQL("INSERT INTO PARTICIPACION_PELICULA_ACTOR (id_participacion, Id_pelicula, id_actor) " +
+                    "VALUES (" + id_participacion + ", " + id_pelicula + ", " + id_actor + ");");
+            bd.close();
+        }
+    }
+
+    public List<PAModelo> mostrarParticipacionesActores() {
+        SQLiteDatabase bd = getReadableDatabase();
+        Cursor cursor = bd.rawQuery("SELECT * FROM PARTICIPACION_PELICULA_ACTOR", null);
+        List<PAModelo> participacionesActores = new ArrayList<>();
+
+        if (cursor.moveToFirst()) {
+            do {
+                participacionesActores.add(new PAModelo(cursor.getInt(0), cursor.getInt(1), cursor.getInt(2)));
+            } while (cursor.moveToNext());
+        }
+        return participacionesActores;
+    }
+
+    public void buscarParticipacionActor(PAModelo participacionActorModelo, int idParticipacion) {
+        SQLiteDatabase bd = getReadableDatabase();
+        Cursor cursor = bd.rawQuery("SELECT * FROM PARTICIPACION_PELICULA_ACTOR WHERE id_participacion =" + idParticipacion, null);
+
+        if (cursor.moveToFirst()) {
+            do {
+                participacionActorModelo.setId_pelicula(cursor.getInt(1));
+                participacionActorModelo.setId_actor(cursor.getInt(2));
+            } while (cursor.moveToNext());
+        }
+    }
+
+    public void editarParticipacionActor(int id_participacion, int id_pelicula, int id_actor) {
+        SQLiteDatabase bd = getWritableDatabase();
+        if (bd != null) {
+            bd.execSQL("UPDATE PARTICIPACION_PELICULA_ACTOR SET Id_pelicula=" + id_pelicula + ", id_actor=" + id_actor +
+                    " WHERE id_participacion=" + id_participacion);
+            bd.close();
+        }
+    }
+
+    public void eliminarParticipacionActor(int id_participacion) {
+        SQLiteDatabase bd = getWritableDatabase();
+        if (bd != null) {
+            bd.execSQL("DELETE FROM PARTICIPACION_PELICULA_ACTOR WHERE id_participacion=" + id_participacion);
+            bd.close();
+        }
+    }
+
+
 
 
 

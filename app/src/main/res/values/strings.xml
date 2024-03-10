@@ -103,6 +103,20 @@
     <string name="btn_eliminarPD"> ELIMINAR </string>
 
 
+    <string name="btn_PA"> Tabla participacion de actores </string>
+    <string name="txt_Id_ParticipacionPA"> Id participacion </string>
+    <string name="txt_Id_peliculaPA"> Id pelicula </string>
+    <string name="txt_Id_ActorPA"> Id actor </string>
+    <string name="hint_IdPA">Id participacion </string>
+    <string name="hint_IdPeliculaPA"> Id pelicula </string>
+    <string name="hint_IdActorPA"> Id actor </string>
+    <string name="btn_agregarPA"> AGREGAR </string>
+    <string name="btn_mostrarPA"> MOSTRAR </string>
+    <string name="btn_buscarPA"> Buscar </string>
+    <string name="btn_editarPA"> EDITAR </string>
+    <string name="btn_eliminarPA"> ELIMINAR </string>
+
+
 
 
 

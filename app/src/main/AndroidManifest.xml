@@ -32,6 +32,8 @@
         <activity android:name=".MainActivityDirector" />
         <activity android:name=".PDActivity" />
         <activity android:name=".MainActivityPD" />
+        <activity android:name=".PAActivity" />
+        <activity android:name=".MainActivityPA" />
 
         <activity
         android:name=".MainActivity" />

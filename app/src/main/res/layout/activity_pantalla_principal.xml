@@ -73,6 +73,13 @@
             android:text="@string/btn_PD"
             android:textStyle="bold" />
 
+        <Button
+            android:id="@+id/btnParticipacionPeliculaActor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_PA"
+            android:textStyle="bold" />
+
 
     </LinearLayout>
 </LinearLayout>
