@@ -36,6 +36,15 @@
             android:text="@string/btn_peliculas"
             android:textStyle="bold" />
 
+
+
+        <Button
+            android:id="@+id/btnActor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_Actores"
+            android:textStyle="bold" />
+
         <Button
             android:id="@+id/btnTipoActor"
             android:layout_width="match_parent"
@@ -44,10 +53,10 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/btnActor"
+            android:id="@+id/btnDirectores"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/btn_Actores"
+            android:text="@string/btn_Directores"
             android:textStyle="bold" />
 
         <Button

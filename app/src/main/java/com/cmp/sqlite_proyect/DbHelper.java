@@ -50,13 +50,16 @@ public class DbHelper extends SQLiteOpenHelper {
             "FOREIGN KEY (Id_pelicula) REFERENCES PELICULAS(Id_pelicula)" +
             ");";
 
-    private static final String TABLA_GANADOR_PREMIO = "CREATE TABLE GANADOR_PREMIO (" +
-            "id_ganador INTEGER PRIMARY KEY, " +
-            "id_pelicula INTEGER NOT NULL, " +
-            "id_premio INTEGER NOT NULL, " +
-            "FOREIGN KEY (id_pelicula) REFERENCES PELICULAS(Id_pelicula), " +
-            "FOREIGN KEY (id_premio) REFERENCES PREMIO(id_premio)" +
+    private static final String TABLA_DIRECTOR = "CREATE TABLE DIRECTOR (" +
+            "id_director INTEGER PRIMARY KEY, " +
+            "nombre TEXT NOT NULL,"+
+            "fecha_nacimiento TEXT NOT NULL, " +
+            "nacionalidad TEXT NOT NULL, " +
+            "sexo TEXT NOT NULL" +
             ");";
+
+
+
 
 
 
@@ -74,7 +77,8 @@ public class DbHelper extends SQLiteOpenHelper {
         db.execSQL(TABLA_ACTOR);
         db.execSQL(TABLA_TIPO_ACTOR);
         db.execSQL(TABLA_PREMIO);
-        db.execSQL(TABLA_GANADOR_PREMIO);
+        db.execSQL(TABLA_DIRECTOR);
+
 
     }
 
@@ -84,7 +88,8 @@ public class DbHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLA_ACTOR);
         db.execSQL("DROP TABLE IF EXISTS " + TABLA_TIPO_ACTOR);
         db.execSQL("DROP TABLE IF EXISTS " + TABLA_PREMIO);
-        db.execSQL("DROP TABLE IF EXISTS " + TABLA_GANADOR_PREMIO);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLA_DIRECTOR);
+
 
         // Luego, crea la nueva tabla con la estructura actualizada
         onCreate(db);
@@ -350,6 +355,70 @@ public class DbHelper extends SQLiteOpenHelper {
         SQLiteDatabase bd = getWritableDatabase();
         if (bd!= null){
             bd.execSQL("DELETE FROM PREMIO WHERE id_premio=" + id_premio);
+            bd.close();
+
+        }
+
+    }
+
+
+    public void agregarDirector(int id_director ,String nombre, String fecha_nacimiento , String nacionalidad, String sexo){
+
+        SQLiteDatabase bd = getWritableDatabase();
+        if (bd!= null){
+            bd.execSQL("INSERT INTO DIRECTOR (id_director , nombre, fecha_nacimiento, nacionalidad, sexo) " +
+                    "VALUES (" + id_director  + ", '" + nombre + "', '" + fecha_nacimiento + "', '" + nacionalidad + "', '" + sexo + "' );");
+            bd.close();
+
+        }
+
+    }
+
+    public List<DirectorModelo> mostrarDirectores(){
+        SQLiteDatabase bd = getReadableDatabase();
+        Cursor cursor = bd.rawQuery("SELECT * FROM DIRECTOR",null);
+        List<DirectorModelo> directores = new ArrayList<>();
+
+        if(cursor.moveToFirst()) {
+            do {
+                directores.add(new DirectorModelo(cursor.getInt(0),cursor.getString(1),cursor.getString(2),cursor.getString(3),cursor.getString(4)));
+            }while (cursor.moveToNext());
+        }
+        return directores;
+    }
+
+    public void buscarDirectores(DirectorModelo directorModelo, int ID){
+        SQLiteDatabase bd = getReadableDatabase();
+        Cursor cursor = bd.rawQuery("SELECT * FROM DIRECTOR WHERE id_director ="+ ID ,null);
+
+
+        if(cursor.moveToFirst()) {
+            do {
+
+                directorModelo.setNombre(cursor.getString(1));
+                directorModelo.setFecha(cursor.getString(2));
+                directorModelo.setNacionalidad(cursor.getString(3));
+                directorModelo.setSexo(cursor.getString(4));
+
+
+
+            }while (cursor.moveToNext());
+        }
+    }
+
+    public void editarDirector(int id_director, String nombre, String fecha_nacimiento, String nacionalidad, String sexo) {
+        SQLiteDatabase bd = getWritableDatabase();
+        if (bd != null) {
+            bd.execSQL("UPDATE DIRECTOR SET nombre='" + nombre + "', fecha_nacimiento='" + fecha_nacimiento + "', nacionalidad='" + nacionalidad + "', sexo='" + sexo + "'" + " WHERE id_director=" + id_director);
+            bd.close();
+        }
+    }
+
+    public void eliminarDirector(int id_director){
+
+        SQLiteDatabase bd = getWritableDatabase();
+        if (bd!= null){
+            bd.execSQL("DELETE FROM DIRECTOR WHERE id_director=" + id_director);
             bd.close();
 
         }

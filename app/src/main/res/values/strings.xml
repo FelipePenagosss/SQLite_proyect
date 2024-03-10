@@ -39,7 +39,7 @@
     <string name="txt_nombreAC"> Nombre Actor </string>
     <string name="txt_fechaAC"> Fecha de nacimiento AAAA/MM/DD </string>
     <string name="txt_nacionalidadAC"> Nacionalidad </string>
-    <string name="txt_sexoAC">Id actor </string>
+    <string name="txt_sexoAC"> Sexo </string>
     <string name="txt_idtipoAC">Id tipo actor </string>
     <string name="hint_IDAC"> Id actor </string>
     <string name="hint_nombreAC"> Nombre Actor </string>
@@ -52,6 +52,24 @@
     <string name="btn_buscarAC"> Buscar </string>
     <string name="btn_editarAC"> EDITAR </string>
     <string name="btn_eliminarAC"> ELIMINAR </string>
+
+    <string name="btn_Directores"> Tabla directores </string>
+    <string name="txt_IDDC"> Id director </string>
+    <string name="txt_nombreDC"> Nombre director </string>
+    <string name="txt_fechaDC"> Fecha de nacimiento AAAA/MM/DD </string>
+    <string name="txt_nacionalidadDC"> Nacionalidad </string>
+    <string name="txt_sexoDC"> Sexo </string>
+    <string name="hint_IDDC"> Id director </string>
+    <string name="hint_nombreDC"> Nombre director </string>
+    <string name="hint_fechaDC"> Fecha de nacimiento AAAA/MM/DD </string>
+    <string name="hint_nacionalidadDC"> Nacionalidad </string>
+    <string name="hint_sexoDC">Sexo </string>
+    <string name="btn_agregarDC"> AGREGAR </string>
+    <string name="btn_mostrarDC"> MOSTRAR </string>
+    <string name="btn_buscarDC"> Buscar </string>
+    <string name="btn_editarDC"> EDITAR </string>
+    <string name="btn_eliminarDC"> ELIMINAR </string>
+
 
     <string name="btn_Premios"> Tabla premios</string>
     <string name="txt_IdPR"> Id premio </string>
