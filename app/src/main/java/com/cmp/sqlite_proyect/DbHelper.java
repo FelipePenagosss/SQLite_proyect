@@ -60,6 +60,24 @@ public class DbHelper extends SQLiteOpenHelper {
 
 
 
+    private static final String TABLA_PARTICIPACION_PELICULA_DIRECTOR =
+            "CREATE TABLE PARTICIPACION_PELICULA_DIRECTOR (" +
+                    "id_participacion INTEGER PRIMARY KEY, " +
+                    "Id_pelicula INTEGER, " +
+                    "id_director INTEGER, " +
+                    "FOREIGN KEY (Id_pelicula) REFERENCES PELICULAS(Id_pelicula), " +
+                    "FOREIGN KEY (id_director) REFERENCES DIRECTOR(id_actor)" +
+                    ");";
+
+    private static final String TABLA_PARTICIPACION_PELICULA_ACTOR =
+            "CREATE TABLE PARTICIPACION_PELICULA_ACTOR (" +
+                    "id_participacion INTEGER PRIMARY KEY, " +
+                    "Id_pelicula INTEGER, " +
+                    "id_actor INTEGER, " +
+                    "FOREIGN KEY (Id_pelicula) REFERENCES PELICULAS(Id_pelicula), " +
+                    "FOREIGN KEY (id_actor) REFERENCES ACTOR(id_actor)" +
+                    ");";
+
 
 
 
@@ -78,6 +96,9 @@ public class DbHelper extends SQLiteOpenHelper {
         db.execSQL(TABLA_TIPO_ACTOR);
         db.execSQL(TABLA_PREMIO);
         db.execSQL(TABLA_DIRECTOR);
+        db.execSQL(TABLA_PARTICIPACION_PELICULA_DIRECTOR);
+        db.execSQL(TABLA_PARTICIPACION_PELICULA_ACTOR);
+
 
 
     }
@@ -89,6 +110,8 @@ public class DbHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLA_TIPO_ACTOR);
         db.execSQL("DROP TABLE IF EXISTS " + TABLA_PREMIO);
         db.execSQL("DROP TABLE IF EXISTS " + TABLA_DIRECTOR);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLA_PARTICIPACION_PELICULA_DIRECTOR);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLA_PARTICIPACION_PELICULA_ACTOR);
 
 
         // Luego, crea la nueva tabla con la estructura actualizada
@@ -424,6 +447,58 @@ public class DbHelper extends SQLiteOpenHelper {
         }
 
     }
+
+    public void agregarParticipacionDirector(int id_participacion, int id_pelicula, int id_director) {
+        SQLiteDatabase bd = getWritableDatabase();
+        if (bd != null) {
+            bd.execSQL("INSERT INTO PARTICIPACION_PELICULA_DIRECTOR (id_participacion, Id_pelicula, id_director) " +
+                    "VALUES (" + id_participacion + ", " + id_pelicula + ", " + id_director + ");");
+            bd.close();
+        }
+    }
+
+    public List<ParticipacionDirectorModelo> mostrarParticipacionesDirectores() {
+        SQLiteDatabase bd = getReadableDatabase();
+        Cursor cursor = bd.rawQuery("SELECT * FROM PARTICIPACION_PELICULA_DIRECTOR", null);
+        List<ParticipacionDirectorModelo> participacionesDirectores = new ArrayList<>();
+
+        if (cursor.moveToFirst()) {
+            do {
+                participacionesDirectores.add(new ParticipacionDirectorModelo(cursor.getInt(0), cursor.getInt(1), cursor.getInt(2)));
+            } while (cursor.moveToNext());
+        }
+        return participacionesDirectores;
+    }
+
+    public void buscarParticipacionDirector(ParticipacionDirectorModelo participacionDirectorModelo, int idParticipacion) {
+        SQLiteDatabase bd = getReadableDatabase();
+        Cursor cursor = bd.rawQuery("SELECT * FROM PARTICIPACION_PELICULA_DIRECTOR WHERE id_participacion =" + idParticipacion, null);
+
+        if (cursor.moveToFirst()) {
+            do {
+                participacionDirectorModelo.setId_pelicula(cursor.getInt(1));
+                participacionDirectorModelo.setId_director(cursor.getInt(2));
+            } while (cursor.moveToNext());
+        }
+    }
+
+    public void editarParticipacionDirector(int id_participacion, int id_pelicula, int id_director) {
+        SQLiteDatabase bd = getWritableDatabase();
+        if (bd != null) {
+            bd.execSQL("UPDATE PARTICIPACION_PELICULA_DIRECTOR SET Id_pelicula=" + id_pelicula + ", id_director=" + id_director +
+                    " WHERE id_participacion=" + id_participacion);
+            bd.close();
+        }
+    }
+
+    public void eliminarParticipacionDirector(int id_participacion) {
+        SQLiteDatabase bd = getWritableDatabase();
+        if (bd != null) {
+            bd.execSQL("DELETE FROM PARTICIPACION_PELICULA_DIRECTOR WHERE id_participacion=" + id_participacion);
+            bd.close();
+        }
+    }
+
 
 
 

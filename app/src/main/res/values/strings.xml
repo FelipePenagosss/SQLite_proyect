@@ -89,6 +89,20 @@
     <string name="btn_eliminarPR"> ELIMINAR </string>
 
 
+    <string name="btn_PD"> Tabla participacion de directores </string>
+    <string name="txt_Id_ParticipacionPD"> Id participacion </string>
+    <string name="txt_Id_peliculaPD"> Id pelicula </string>
+    <string name="txt_Id_directorPD"> Id director </string>
+    <string name="hint_IdPD">Id participacion </string>
+    <string name="hint_IdPeliculaPD"> Id pelicula </string>
+    <string name="hint_IdDirectorPD"> Id director </string>
+    <string name="btn_agregarPD"> AGREGAR </string>
+    <string name="btn_mostrarPD"> MOSTRAR </string>
+    <string name="btn_buscarPD"> Buscar </string>
+    <string name="btn_editarPD"> EDITAR </string>
+    <string name="btn_eliminarPD"> ELIMINAR </string>
+
+
 
 
 

@@ -30,6 +30,8 @@
         <activity android:name=".MainActivityPremio" />
         <activity android:name=".DirectorActivity" />
         <activity android:name=".MainActivityDirector" />
+        <activity android:name=".PDActivity" />
+        <activity android:name=".MainActivityPD" />
 
         <activity
         android:name=".MainActivity" />
