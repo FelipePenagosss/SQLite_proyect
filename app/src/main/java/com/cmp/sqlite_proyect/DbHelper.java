@@ -45,7 +45,9 @@ public class DbHelper extends SQLiteOpenHelper {
             "id_premio INTEGER PRIMARY KEY, " +
             "nombre TEXT NOT NULL, " +
             "categoria TEXT NOT NULL, " +
-            "año INTEGER NOT NULL" +
+            "año INTEGER NOT NULL, " +
+            "Id_pelicula INTEGER, " +  // Clave foránea
+            "FOREIGN KEY (Id_pelicula) REFERENCES PELICULAS(Id_pelicula)" +
             ");";
 
     private static final String TABLA_GANADOR_PREMIO = "CREATE TABLE GANADOR_PREMIO (" +
@@ -287,6 +289,78 @@ public class DbHelper extends SQLiteOpenHelper {
         }
 
     }
+
+    public void agregarPremio(int id_premio,String nombre, String categoria , int anio, int Id_pelicula){
+
+        SQLiteDatabase bd = getWritableDatabase();
+        if (bd!= null){
+
+            bd.execSQL("INSERT INTO PREMIO (id_premio, nombre, categoria, año, Id_pelicula) " +
+                    "VALUES (" + id_premio + ", '" + nombre + "', '" + categoria + "', " + anio + ", " + Id_pelicula + ");");
+            bd.close();
+
+
+        }
+
+    }
+
+    public List<PremioModelo> mostrarPremios(){
+        SQLiteDatabase bd = getReadableDatabase();
+        Cursor cursor = bd.rawQuery("SELECT * FROM PREMIO",null);
+        List<PremioModelo> premios = new ArrayList<>();
+
+        if(cursor.moveToFirst()) {
+            do {
+                premios.add(new PremioModelo(cursor.getInt(0),cursor.getString(1),cursor.getString(2),cursor.getInt(3),cursor.getInt(4)));
+            }while (cursor.moveToNext());
+        }
+        return premios;
+    }
+
+
+    public void buscarPremio(PremioModelo premioModelo, int ID){
+        SQLiteDatabase bd = getReadableDatabase();
+        Cursor cursor = bd.rawQuery("SELECT * FROM PREMIO WHERE id_premio ="+ ID ,null);
+
+
+        if(cursor.moveToFirst()) {
+            do {
+
+                premioModelo.setNombre(cursor.getString(1));
+                premioModelo.setCategoria(cursor.getString(2));
+                premioModelo.setAnio(cursor.getInt(3));
+                premioModelo.setId_peliculaPr(cursor.getInt(4));
+
+
+            }while (cursor.moveToNext());
+        }
+    }
+
+    public void editarPremio(int id_premio,String nombre, String categoria , int anio, int Id_pelicula) {
+        SQLiteDatabase bd = getWritableDatabase();
+        if (bd != null) {
+            bd.execSQL("UPDATE PREMIO SET nombre='" + nombre + "', categoria='" + categoria + "', año=" + anio + ", Id_pelicula=" + Id_pelicula + " WHERE id_premio=" + id_premio);
+            bd.close();
+        }
+    }
+
+
+    public void eliminarPremio(int id_premio){
+
+        SQLiteDatabase bd = getWritableDatabase();
+        if (bd!= null){
+            bd.execSQL("DELETE FROM PREMIO WHERE id_premio=" + id_premio);
+            bd.close();
+
+        }
+
+    }
+
+
+
+
+
+
 
 
 

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.cmp.sqlite_proyect.MainActivityTipoActor"
-
-    >
+    tools:context="com.cmp.sqlite_proyect.MainActivityPremio">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,7 +22,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             android:gravity="center"
-            android:text="TIPOS DE ACTORES"
+            android:text="PREMIOS"
             android:textSize="26sp"
             android:textStyle="bold" />
 
@@ -31,7 +30,7 @@
             android:id="@+id/txtviewtpc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Id tipo actor " />
+            android:text="Id premio " />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -40,20 +39,20 @@
 
             <EditText
 
-                android:id="@+id/editIdTA"
+                android:id="@+id/editIdPR"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="@string/hint_IdTA"
-                android:inputType="text"
+                android:hint="@string/hint_IdPR"
+                android:inputType="number"
                 />
 
             <Button
-                android:id="@+id/btnBuscarTA"
+                android:id="@+id/btnBuscarPR"
                 android:layout_width="146dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/btn_buscarTA" />
+                android:text="@string/btn_buscarPR" />
 
         </LinearLayout>
 
@@ -61,41 +60,89 @@
             android:id="@+id/txtviewtpc1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nombre " />
+            android:text="Nombre premio  " />
 
         <EditText
 
-            android:id="@+id/editNombreTA"
+            android:id="@+id/editNombrePR"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="@string/hint_nombreTA"
+            android:hint="@string/hint_nombrePR"
             android:inputType="text"
             />
 
-        <Button
-            android:id="@+id/btnAgregarTA"
+        <TextView
+            android:id="@+id/txtviewtpc2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/btn_agregarTA" />
+            android:text="Categoria" />
+
+        <EditText
+
+            android:id="@+id/editCategoriaPR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/hint_categoriaPR"
+            android:inputType="text"
+            />
+
+        <TextView
+            android:id="@+id/txtviewtpc3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Año" />
+
+        <EditText
+
+            android:id="@+id/editAnioPR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/hint_anioPR"
+            android:inputType="number"
+            />
+
+        <TextView
+            android:id="@+id/txtviewtpc4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Id pelicula ganadora" />
+
+        <EditText
+
+            android:id="@+id/editIdpeliculaPR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/hint_idpeliculaPR"
+            android:inputType="number"
+            />
 
         <Button
-            android:id="@+id/btnEditaTA"
+            android:id="@+id/btnAgregarPR"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/btn_editarTA" />
+            android:text="@string/btn_agregarPR" />
 
         <Button
-            android:id="@+id/btnEliminarTA"
+            android:id="@+id/btnEditaPR"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/btn_eliminarTA" />
+            android:text="@string/btn_editarPR" />
 
         <Button
-            android:id="@+id/btnMostrarTA"
+            android:id="@+id/btnEliminarPR"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/btn_mostrarTA" />
+            android:text="@string/btn_eliminarPR" />
+
+        <Button
+            android:id="@+id/btnMostrarPR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_mostrarPR" />
 
 
 
@@ -105,5 +152,8 @@
 
 
     </LinearLayout>
+
+
+
 
 </RelativeLayout>

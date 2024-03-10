@@ -50,6 +50,13 @@
             android:text="@string/btn_Actores"
             android:textStyle="bold" />
 
+        <Button
+            android:id="@+id/btnPremio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_Premios"
+            android:textStyle="bold" />
+
 
     </LinearLayout>
 </LinearLayout>

@@ -26,6 +26,8 @@
         <activity android:name=".TipoActorActivity" />
         <activity android:name=".ActorActivity" />
         <activity android:name=".MainActivityActor" />
+        <activity android:name=".PremioActivity" />
+        <activity android:name=".MainActivityPremio" />
 
         <activity
         android:name=".MainActivity" />

@@ -26,8 +26,6 @@ public class PeliculasActivity extends AppCompatActivity {
         DbHelper dbHelper  = new DbHelper(getApplicationContext());
 
 
-
-
         peliculasAdaptador = new PeliculasAdaptador(dbHelper.mostrarPeliculas());
         recyclerViewPelicula.setAdapter(peliculasAdaptador);
 

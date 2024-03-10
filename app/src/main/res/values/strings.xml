@@ -53,6 +53,23 @@
     <string name="btn_editarAC"> EDITAR </string>
     <string name="btn_eliminarAC"> ELIMINAR </string>
 
+    <string name="btn_Premios"> Tabla premios</string>
+    <string name="txt_IdPR"> Id premio </string>
+    <string name="txt_nombrePR"> Nombre premio </string>
+    <string name="txt_categoriaPR"> Categoria premio </string>
+    <string name="txt_anioPR"> Año del premio </string>
+    <string name="txt_idpeliculaPR"> Id pelicula premio </string>
+    <string name="hint_IdPR">Id premio </string>
+    <string name="hint_nombrePR">Nombre del premio </string>
+    <string name="hint_categoriaPR">Categoria </string>
+    <string name="hint_anioPR"> Año  </string>
+    <string name="hint_idpeliculaPR"> Id pelicula </string>
+    <string name="btn_agregarPR"> AGREGAR </string>
+    <string name="btn_mostrarPR"> MOSTRAR </string>
+    <string name="btn_buscarPR"> Buscar </string>
+    <string name="btn_editarPR"> EDITAR </string>
+    <string name="btn_eliminarPR"> ELIMINAR </string>
+
 
 
 
